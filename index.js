@@ -73,10 +73,7 @@ function loggedInFailFunction() {
     document.getElementById("tryAgain").style.display = "block";
 }
 
-loginButton = document.getElementById("logIn");
-
-loginButton.addEventListener("click", function() {
-    
+function pressLoggedIn (){
     let userNameInput = document.getElementById("userNameInput").value;
     let passwordInput = document.getElementById("passwordInput").value;
     let loggedIn = false;
@@ -94,8 +91,21 @@ loginButton.addEventListener("click", function() {
    }
 
    console.log(loggedIn);
+}
+
+
+document.getElementById("logIn").addEventListener("click", function() { //när man klickat på kanppen logga in kallar man på funktionen för att prova anv, lös
+    pressLoggedIn();
 
 });
+
+document.getElementById("passwordInput").addEventListener("keydown", function (event) { //gör så att man kan trycka enter i sista inputfältet för att logga in
+    if (event.key === "Enter" || event.key === "Return") {
+      // Kalla på din funktion som ska köras när Enter trycks
+      pressLoggedIn();
+    }
+});
+
 
     tryAgainButton = document.getElementById("tryAgain");
 
