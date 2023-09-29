@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Brukshundklubben</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <div class="row"><p class="pScroll">Träningstider</p></div>
+        <div class="row"><p class="pScroll">Regler</p></div>
+        <div class="row"><p class="pScroll">Mötestider</p></div>
+        <div class="row mobile">
+            <p id="headerLogIn">Logga in</p>
+            <p id="headerLogOut">Logga ut</p>
+        </div>
+        
+
+    </header>
+    <main>
+        <div id="images">
+            <div id="changeImage">
+                <div id="changeImageHOneBlock">
+                    <div id="opacityControll"> <!-- Ställer tillbaka opaciteten till 1 så att texten h1 lyser fullt -->
+                        
+                    <div id="HOneBlockLoggedOut"> <!-- Denna box visas om du är utloggad -->
+                        <h1>Brukshundklubben</h1>
+                        <h3>Logga in för att ta del av klubbens information</h3>
+                    </div>
+
+                    <div id="HOneBlockLoggedIn"> <!-- Denna box visas om du är inloggad -->
+                        <h1 id="hOnePersonName">Välkommen till Brukshundklubben </h1>
+                    </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    <div id="logInContainer">
+        <h3 id="logInOrBeMemberHTree">Vänligen logga in eller skapa nytt medlemskap</h3>
+        <input id="userNameInput" type="text" placeholder="Skriv in ditt namn här...">
+        <input id="passwordInput" type="password" placeholder="Skriv in ditt lösenord här...">
+        <button class="logInContainerButton" id="logIn">Logga in</button>
+        <button class="logInContainerButton" id="createNewUser">Bli Medlem</button>
+
+        <div id="fail"><p>Användarnamn/lösenord fel</p></div>
+        <button id="tryAgain">Försök igen</button>
+    </div>
+
+    <div id="createNewUserContainer">
+        <h3 id="logInOrBeMemberHTree">Fyll i dina användaruppgifter</h3>
+        <input id="userNameNewMemberInput" type="text" placeholder="Skriv in ditt namn här...">
+        <input id="passwordNewMemberInput" type="password" placeholder="Skriv in ditt lösenord här...">
+        <button class="logInContainerButton" id="createNewUserInputs">Skapa Medlemskap</button>
+        <button class="logInContainerButton" id="goBack">Tillbaka</button>
+        
+    </div>
+
+
+    <div id="rulesBlock">
+        <div class=" rulesBlockInfo">
+            <h2>Träningstider</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec accumsan, massa id posuere sagittis, massa enim aliquet sem, ac volutpat odio augue eu diam. 
+                Nullam vel suscipit eros, vel aliquam mi. Mauris bibendum aliquam risus varius aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                Maecenas velit arcu, volutpat sit amet aliquam id, efficitur vel sapien. Fusce fringilla nisi nec sapien auctor vestibulum. Donec porttitor neque at tortor vulputate tristique. 
+                Nam pellentesque lectus sed condimentum volutpat.
+            </p>
+        </div>
+        <div class="rulesBlockInfo">
+            <h2>Regler</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec accumsan, massa id posuere sagittis, massa enim aliquet sem, ac volutpat odio augue eu diam. 
+                Nullam vel suscipit eros, vel aliquam mi. Mauris bibendum aliquam risus varius aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                Maecenas velit arcu, volutpat sit amet aliquam id, efficitur vel sapien. Fusce fringilla nisi nec sapien auctor vestibulum. Donec porttitor neque at tortor vulputate tristique. 
+                Nam pellentesque lectus sed condimentum volutpat.
+            </p>
+        </div>
+        <div class="rulesBlockInfo">
+            <h2>Mötestider</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec accumsan, massa id posuere sagittis, massa enim aliquet sem, ac volutpat odio augue eu diam. 
+                Nullam vel suscipit eros, vel aliquam mi. Mauris bibendum aliquam risus varius aliquet. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                Maecenas velit arcu, volutpat sit amet aliquam id, efficitur vel sapien. Fusce fringilla nisi nec sapien auctor vestibulum. Donec porttitor neque at tortor vulputate tristique. 
+                Nam pellentesque lectus sed condimentum volutpat.
+            </p>
+        </div>
+        
+    </div>
+
+
+    </main>
+    
+    <footer>
+        <p>Brukshundklubben 2023</p>
+    </footer>
+    
+    <script src="index.js"></script>
+</body>
+</html>
