@@ -24,7 +24,7 @@ function changeImage(numberOfImages, timer) {
 let changeImageId = document.getElementById("changeImage");
 changeImageId.style.backgroundImage = "url('bildspel1.jpg')";
 
-changeImage(3, 5000);
+changeImage(3, 5000); //kallar på funktionen och säger att det är tre olika bilder och att väntetiden medllan bildbyte är 5s
 
 
 
@@ -36,7 +36,7 @@ let userNameArrayNumber;
   // Ange sökvägen till textfilen med användarnamnen
   const filePathUserName = 'usernames.txt';
 
-  // Använd Fetch API för att hämta textfilen
+  
   fetch(filePathUserName)
     .then((response) => {
       // Returnera texten som ett löfte (Promise)
@@ -50,7 +50,7 @@ let userNameArrayNumber;
       // Ange sökvägen till textfilen för lösenorden
   const filePathPassword = 'password.txt';
 
-  // Använd Fetch API för att hämta textfilen
+  
   fetch(filePathPassword)
     .then((response) => {
       // Returnera texten som ett löfte (Promise)
@@ -62,12 +62,12 @@ let userNameArrayNumber;
     })
 
 
-function loggedInFunction() {
-    localStorage.setItem("loggedInStorage", "true"); 
+function loggedInFunction() { //Funktion om man angivit rätt användarnamn eller lösenord
+    localStorage.setItem("loggedInStorage", "true"); //Sätter en loacalStorage så att webbläsaren vet att man är inloggad
     location.reload();
 }
 
-function loggedInFailFunction() {
+function loggedInFailFunction() { //Funktion om man angivit fel användarnamn eller lösenord
     document.getElementById("logIn").style.display = "none";
     document.getElementById("fail").style.display = "block";
     document.getElementById("tryAgain").style.display = "block";
@@ -75,7 +75,7 @@ function loggedInFailFunction() {
     
 }
 
-function pressLoggedIn (){
+function pressLoggedIn (){ //Funktion klickat på logga in alternativt tryckt enter i sista inputen
     let userNameInput = document.getElementById("userNameInput").value;
     let passwordInput = document.getElementById("passwordInput").value;
     let loggedIn = false;
@@ -111,7 +111,7 @@ document.getElementById("passwordInput").addEventListener("keydown", function (e
 
     tryAgainButton = document.getElementById("tryAgain");
 
-    tryAgainButton.addEventListener("click", function () {
+    tryAgainButton.addEventListener("click", function () { //Knapp för försök igen, laddar om sidan
     location.reload();
 });
 
@@ -183,8 +183,8 @@ document.getElementById("createNewUserInputs").addEventListener("click", functio
 
     let newUserName = document.getElementById("userNameNewMemberInput").value;
     let newPassword = document.getElementById("passwordNewMemberInput").value;
-    sessionStorage.setItem("newUserName", newUserName);
-    sessionStorage.setItem("newPassword", newPassword);
+    sessionStorage.setItem("newUserName", newUserName); //sparar användarnamnet i sessionstorage då jag inte kopplat det så att den sparar över den i txt-filen
+    sessionStorage.setItem("newPassword", newPassword);//sparar lösenordet i sessionstorage då jag inte kopplat det så att den sparar över den i txt-filen
     location.reload();
 });
 
