@@ -71,6 +71,8 @@ function loggedInFailFunction() {
     document.getElementById("logIn").style.display = "none";
     document.getElementById("fail").style.display = "block";
     document.getElementById("tryAgain").style.display = "block";
+    document.getElementById("createNewUser").style.display = "none";
+    
 }
 
 function pressLoggedIn (){
